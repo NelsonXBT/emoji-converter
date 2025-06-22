@@ -1,0 +1,105 @@
+/* 
+GLOBAL STYLES 
+*/
+
+html {
+    background-color: #eee;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    margin: 0 auto;
+    width: 100vw;
+    text-align: center;
+    overflow-x: hidden;
+    max-width: 1500px;
+    background-color: rgb(225, 233, 241);
+}
+
+header {
+    font-size: 0.85rem;
+    padding: 3rem 0 0 0;
+}
+header p {
+    font-size: 0.85rem;
+}
+
+.formCenter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgb(215, 224, 233);
+    padding: 1rem 0 0.5rem 0;
+    margin: 0 2.5rem;
+
+} 
+#convertBtn {
+    background-color: blueviolet;
+    font-size: 1rem;
+    color: white;
+    border: 0.2rem solid blueviolet;
+    border-radius: 0.2rem;
+    margin-bottom: 0.56rem ;
+    
+}
+#inputField {
+    padding: 0.5rem;
+}
+#results {
+    background-color: rgb(215, 224, 233);
+    font-size: 0.85rem;
+    text-align: justify;
+    border: 0.3rem solid rgb(215, 224, 233);
+    padding: 0 1rem;
+    margin: 1rem 2.5rem;
+}
+#results h3 {
+    background-color: blueviolet;
+    font-size: 1rem;
+    color: white;
+    padding: 0.3rem;
+    margin-left: -0.4rem;
+}
+
+footer {
+  background-color: rgb(85, 85, 85);
+  color: white;
+  font-size: 0.8rem;
+  padding: 1rem;
+  margin: 5rem 0;
+}
+
+footer a {
+  color: rgb(99, 139, 179);
+}
+footer a:hover {
+  color: rgb(215, 224, 233);
+}
+
+
+
+/* Responsive: Mobile view */
+@media (min-width: 768px) {
+  
+/* .formCenter {
+    padding: 1rem 0 0.5rem 0;
+    margin: 0 2.5rem;
+
+}  */
+#convertBtn {
+    background-color: blueviolet;
+    font-size: 1rem;
+    color: white;
+    border: 0.2rem solid blueviolet;
+    border-radius: 0.2rem;
+    margin-bottom: 0.56rem ;
+    
+}
+#inputField {
+    padding: 1rem 0.1rem;
+}
+
+
+}
+

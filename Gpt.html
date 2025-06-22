@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Emoji Converter</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+input { padding: 8px; font-size: 16px; }
+.result { margin-top: 20px; font-size: 18px; }
+</style>
+</head>
+<body>
+<h2>🔥 Emoji Converter</h2>
+<input id="inputField" placeholder="Enter Unicode (e.g., U+1F525), decimal, or hex" />
+<button id="convertBtn">Convert</button>
+<div class="result" id="results"></div>
+
+<script>
+function toDecimal(value) {
+  if (value.startsWith("U+")) {
+    return parseInt(value.replace("U+", ""), 16);
+  } else if (value.startsWith("0x")) {
+    return parseInt(value, 16);
+  } else if (/^[0-9]+$/.test(value)) {
+    return parseInt(value, 10);
+  } else {
+    return parseInt(value, 16);
+  }
+}
+
+function decimalToUnicode(dec) {
+  return "U+" + dec.toString(16).toUpperCase();
+}
+
+function decimalToEmoji(dec) {
+  return String.fromCodePoint(dec);
+}
+
+document.getElementById("convertBtn").addEventListener("click", () => {
+  const input = document.getElementById("inputField").value.trim();
+  const decimal = toDecimal(input);
+  const results = `
+    Decimal: ${decimal}<br/>
+    Unicode Point: ${decimalToUnicode(decimal)}<br/>
+    Emoji: ${decimalToEmoji(decimal)}
+  `;
+  document.getElementById("results").innerHTML = results;
+});
+</script>
+</body>
+</html>
